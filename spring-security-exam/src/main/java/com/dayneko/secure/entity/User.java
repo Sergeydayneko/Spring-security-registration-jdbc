@@ -2,6 +2,7 @@ package com.dayneko.secure.entity;
 
 public class User {
 
+    private int user_id;
     private String username;
     private String password;
     private String role;
@@ -46,5 +47,21 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    @Override
+    public String toString() {
+        String userId = String.valueOf(getUser_id());
+        String userName = getUsername();
+
+        return "This is " + userName + " with ID = " + userId;
     }
 }
