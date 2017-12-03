@@ -13,5 +13,4 @@ public class MainController {
     public String start(Model model){
         return "index";
     }
-
 }

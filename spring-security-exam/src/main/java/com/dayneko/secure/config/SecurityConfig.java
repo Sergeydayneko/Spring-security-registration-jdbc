@@ -21,8 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
-    //пользование encoder'ом требует использование более поздних версий спринга
-    //TODO пока работает без encoder
+    //TODO сделать encoder
     @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
@@ -31,7 +30,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
         http.authorizeRequests()
                 .antMatchers("/userPage").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')") //пишем с приставкой ROLE_
                 .antMatchers("/adminPage").access("hasRole('ROLE_ADMIN')")
@@ -61,7 +59,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true);
 
     }
-
-
-
 }

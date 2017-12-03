@@ -8,8 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 
-import static java.awt.Color.red;
-
 @Controller
 public class LoginController {
 
@@ -36,7 +34,6 @@ public class LoginController {
 
     @RequestMapping(value = "/403", method = RequestMethod.GET)
     public ModelAndView accessDenied(Principal user) {
-
         ModelAndView model = new ModelAndView();
 
         //Login having test

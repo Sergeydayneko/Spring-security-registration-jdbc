@@ -11,6 +11,7 @@ import javax.servlet.ServletRegistration.Dynamic;
 /**
  * Dispatcher Servlet configuration
  */
+
 public class Initializer implements WebApplicationInitializer {
 
     private static final String DISPATCHER_SERVLET_NAME = "dispatcher";
@@ -21,7 +22,6 @@ public class Initializer implements WebApplicationInitializer {
         ctx.register(WebAppConfig.class);
         ctx.register(SecurityConfig.class);
         servletContext.addListener(new ContextLoaderListener(ctx));
-
         ctx.setServletContext(servletContext);
 
         Dynamic servlet = servletContext.addServlet(DISPATCHER_SERVLET_NAME, new DispatcherServlet(ctx));

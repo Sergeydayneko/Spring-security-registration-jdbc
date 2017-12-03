@@ -1,6 +1,5 @@
 package com.dayneko.secure.config;
 
-import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,11 +7,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
-
-
 
 /**
  * Standard Web Configuration(view resolvers here)
@@ -28,7 +24,6 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");
 //        registry.addViewController("/").setViewName("home"); //посмотреть как добавить
     }
-
 
     @Bean
     public UrlBasedViewResolver setupViewResolver() {

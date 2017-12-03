@@ -26,7 +26,6 @@ public class RegisterController {
         return mav;
     }
 
-
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
     public ModelAndView addUser(@ModelAttribute("User") User user) {
         userDAO.register(user);
@@ -34,5 +33,4 @@ public class RegisterController {
         ModelAndView mav = new ModelAndView("welcome");
         return mav;
     }
-
 }
