@@ -1,5 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@page session="true"%>
 
 <html>
 <head>
@@ -50,7 +51,7 @@
         <tr></tr>
         <tr>
             <td></td>
-            <td><a href="home.jsp">Home</a>
+            <td><a href="/">Home</a>
             </td>
         </tr>
     </table>

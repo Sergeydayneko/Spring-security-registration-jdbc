@@ -13,7 +13,9 @@
 <p><a class="btn btn-lg btn-info" href="<c:url value="/index" />" role="button">Return back</a></p>
 
 
-<link href="<c:url value="/pages/css/bootstrap.css" />" rel="stylesheet">
-<link href="<c:url value="/pages/css/jumbotron-narrow.css" />" rel="stylesheet">
+<link href="<c:url value="../resources/vendor/css/bootstrap.css" />" rel="stylesheet">
+<link href="<c:url value="../resources/vendor/css/jumbotron-narrow.css" />" rel="stylesheet">
+<link href="<c:url value="../resources/vendor/css/jumbotron-narrow.css" />" rel="stylesheet">
+<link href="<c:url value="" />" rel="stylesheet">
 </body>
 </html>
