@@ -1,7 +1,9 @@
 package com.dayneko.secure.controller;
 
+import com.dayneko.secure.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,10 +13,12 @@ import java.security.Principal;
 @Controller
 public class LoginController {
 
-    //There is no need to use method = RequestMethod.GET
     @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public String indexPage(Model model) {
-        return "login";
+    public ModelAndView indexPage(@ModelAttribute("userJSP") User user) {
+        ModelAndView mav = new ModelAndView("index");
+        mav.addObject("MyUser", user);
+
+        return mav;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -48,5 +52,4 @@ public class LoginController {
         model.setViewName("403");
         return model;
     }
-
 }

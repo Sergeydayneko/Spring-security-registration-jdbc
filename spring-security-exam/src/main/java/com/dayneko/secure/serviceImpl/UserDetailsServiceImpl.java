@@ -21,7 +21,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
-        com.dayneko.secure.entity.User userInfo = userDAO.getUserInfo(username);
+        com.dayneko.secure.entity.User userInfo = userDAO.getLoginInfo(username);
         GrantedAuthority authority = new SimpleGrantedAuthority(userInfo.getRole());
         UserDetails userDetails = (UserDetails)new org.springframework.security.core.userdetails.User(userInfo.getUsername(),
                 userInfo.getPassword(), Arrays.asList(authority));

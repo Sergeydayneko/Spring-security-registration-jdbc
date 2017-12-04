@@ -45,4 +45,3 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         return driverManagerDataSource;
     }
 }
-
