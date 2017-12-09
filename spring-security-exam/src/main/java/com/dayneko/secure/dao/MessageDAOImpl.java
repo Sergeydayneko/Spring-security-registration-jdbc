@@ -33,9 +33,9 @@ public class MessageDAOImpl implements MessageDAO {
         jdbcTemplate.update(
                 sql,
                 new Object[] {
-                        dateFormat.format(message.getSend_date()),
-                        message.getMessage_owner().getUser_id(),
-                        message.getMessage_content()
+                        dateFormat.format(message.getSendDate()),
+                        message.getMessageOwner().getUserId(),
+                        message.getMessageContent()
                 });
     }
 
@@ -50,8 +50,9 @@ public class MessageDAOImpl implements MessageDAO {
             public Message mapRow(ResultSet resultSet, int rowNum) throws SQLException {
                 Message message = new Message();
                 message.setOwnerName(resultSet.getString("username"));
-                message.setSend_date(resultSet.getDate("shpt_date"));
-                message.setMessage_content(resultSet.getString("content"));
+                message.setSendDate(resultSet.getDate("shpt_date"));
+                message.setMessageContent(resultSet.getString("content"));
+                System.out.println("---" + message.toString());
                 return message;
             }
         });

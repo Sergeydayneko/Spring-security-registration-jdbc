@@ -17,13 +17,13 @@ public class MessageEncoder implements Encoder.Text<Message> {
 
     @Override
     public String encode(Message message) throws EncodeException {
-        User message_owner = message.getMessage_owner();
+        User message_owner = message.getMessageOwner();
 
         JsonObject jsonObject = Json.createObjectBuilder()
-                .add("user_id", message_owner.getUser_id())
-                .add("sendDate", String.valueOf(message.getSend_date()))
+                .add("user_id", message_owner.getUserId())
+                .add("sendDate", String.valueOf(message.getSendDate()))
                 .add("username", message_owner.getUsername())
-                .add("messageContent", message.getMessage_content())
+                .add("messageContent", message.getMessageContent())
                 .build();
 
         return jsonObject.toString();

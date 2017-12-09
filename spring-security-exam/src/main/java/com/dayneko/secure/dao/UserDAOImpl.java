@@ -87,7 +87,7 @@ public class UserDAOImpl implements UserDAO {
                     @Override
                     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
                         User user = new User();
-                        user.setUser_id(rs.getInt("id"));
+                        user.setUserId(rs.getInt("id"));
                         user.setUsername(rs.getString("username"));
                         user.setEmail(rs.getString("email"));
 

@@ -20,13 +20,11 @@ public class MessageDecoder implements Decoder.Text<Message> {
 
         JsonObject jsonObject = Json.createReader(new StringReader(jsonMessage)).readObject();
         Message message = new Message();
-        message.setMessage_content(jsonObject.getString("messageText")); //посмотреть как у меня прописан контент во фронте
-        message.setSend_date(new Date());
-        message.setMessage_owner(new User());
-        message.getMessage_owner().setUser_id(Integer.parseInt(jsonObject.getString("userId")));
-        message.getMessage_owner().setUsername(jsonObject.getString("userName"));
-
-        System.out.println(message.toString());
+        message.setMessageContent(jsonObject.getString("messageText")); //посмотреть как у меня прописан контент во фронте
+        message.setSendDate(new Date());
+        message.setMessageOwner(new User());
+        message.getMessageOwner().setUserId(Integer.parseInt(jsonObject.getString("userId")));
+        message.getMessageOwner().setUsername(jsonObject.getString("userName"));
 
         return message;
 

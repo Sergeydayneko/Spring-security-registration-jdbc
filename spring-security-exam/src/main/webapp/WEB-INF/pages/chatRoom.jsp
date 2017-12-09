@@ -19,12 +19,12 @@
 
 
     <div class="messageinputer">
-        <textarea spellcheck="true" name="inputPanel" id="messageinput" class="messageinput" placeholder="Введите Ваше сообщение..." rows="5" cols="100" autofocus></textarea>
+        <textarea spellcheck="true" name="inputPanel" id="messageinput" class="messageInput" placeholder="Введите Ваше сообщение..." rows="5" cols="100" autofocus></textarea>
         <input class="submitButton" onclick="sendMessage();"  type="submit" value="Отправить">
     </div>
 
     <input  type="hidden" id="username" value="${username}"/>
-    <input  type="hidden" id="user_id" value="${user_id}"/>
+    <input  type="hidden" id="userId" value="${user_id}"/>
 
 </div>
 </body>

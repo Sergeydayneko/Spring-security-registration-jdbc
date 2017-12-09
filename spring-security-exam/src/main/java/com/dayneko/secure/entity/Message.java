@@ -5,38 +5,38 @@ import java.util.Date;
 
 public class Message {
 
-    private int message_id;
-    private Date send_date;
-    private User message_owner;
+    private int messageId;
+    private Date sendDate;
+    private User messageOwner;
     private String ownerName;
-    private String message_content;
+    private String messageContent;
 
-    public int getMessage_id() {
-        return message_id;
+    public int getMessageId() {
+        return messageId;
     }
-    public void setMessage_id(int message_id) {
-        this.message_id = message_id;
-    }
-
-    public User getMessage_owner() {
-        return message_owner;
-    }
-    public void setMessage_owner(User message_owner) {
-        this.message_owner = message_owner;
+    public void setMessageId(int messageId) {
+        this.messageId = messageId;
     }
 
-    public String getMessage_content() {
-        return message_content;
+    public User getMessageOwner() {
+        return messageOwner;
     }
-    public void setMessage_content(String message_content) {
-        this.message_content = message_content;
+    public void setMessageOwner(User messageOwner) {
+        this.messageOwner = messageOwner;
     }
 
-    public Date getSend_date() {
-        return send_date;
+    public String getMessageContent() {
+        return messageContent;
     }
-    public void setSend_date(Date send_date) {
-        this.send_date = send_date;
+    public void setMessageContent(String messageContent) {
+        this.messageContent = messageContent;
+    }
+
+    public Date getSendDate() {
+        return sendDate;
+    }
+    public void setSendDate(Date sendDate) {
+        this.sendDate = sendDate;
     }
 
     public String getOwnerName() {
@@ -49,7 +49,7 @@ public class Message {
     @Override
     public String toString(){
         String name = getOwnerName();
-        String content = getMessage_content();
+        String content = getMessageContent();
 
         return name + " has send you a message with this content " + content;
     }

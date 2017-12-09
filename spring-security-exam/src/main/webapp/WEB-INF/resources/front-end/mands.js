@@ -16,8 +16,8 @@ $(document).ready(function () {
 
                 _.each(messages, function (message) {
                     let userName = message.ownerName
-                    let content = message.message_content
-                    let sendDate = message.send_date
+                    let content = message.messageContent
+                    let sendDate = message.sendDate
 
                     let messagesArea = `
                                 <div class="areaSendDate">${sendDate} </div>
@@ -26,24 +26,19 @@ $(document).ready(function () {
                                 `
 
                     $('#messageArea').append(messagesArea)
-
                 })
-
              })
             .catch( function (reject) {
                 console.log(reject)
             })
-
     }
-
 
     sendMessage = () => {
 
-
     //    Берем значения того, кто отправил и что он отправил
         let userName    = document.getElementById('username').value
-        let userId      = document.getElementById('user_id').value
-        let messageText = document.getElementById('messageinput').value
+        let userId      = document.getElementById('userDd').value
+        let messageText = document.getElementById('messageInput').value
 
         if (messageText.length > 0 && messageText.trim() != "") {
             var messageJSON = {
@@ -57,10 +52,9 @@ $(document).ready(function () {
         webSocket.send(JSON.stringify(messageJSON))
 
         //Очищаем строку ввода сообщения
-        document.getElementById('messageinput').value = ""
+        document.getElementById('messageInput').value = ""
 
         let sendDate = new Date().getDate()
-        debugger
 
         let messageArea = `
                            <div class="areaSendDate">${sendDate} </div>
@@ -71,11 +65,6 @@ $(document).ready(function () {
         $('#messageArea').append(messageArea)
     }
 })
-
-
-
-
-
 
 writeResponse = event => {
     console.log(event)

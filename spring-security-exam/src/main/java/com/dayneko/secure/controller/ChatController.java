@@ -38,7 +38,7 @@ public class ChatController {
         String name = auth.getName(); //get logged in username
         model.addAttribute("username", name);
         User myUser = userDAO.getUserInfo(name);
-        model.addAttribute("user_id", myUser.getUser_id());
+        model.addAttribute("user_id", myUser.getUserId());
         model.addAttribute("username", myUser.getUsername());
         model.addAttribute("email", myUser.getEmail());
         model.addAttribute("telephone", myUser.getPhone());
@@ -49,6 +49,10 @@ public class ChatController {
     @GetMapping("chatMessages")
     public ResponseEntity<List<Message>> createArticle() {
         List<Message> messages = messageDAO.loadMessages();
+
+        for (Message message : messages) {
+            System.out.println("+++ " + message.getMessageContent());
+        }
 
         return new ResponseEntity<List<Message>>(messages, HttpStatus.OK);
     }
