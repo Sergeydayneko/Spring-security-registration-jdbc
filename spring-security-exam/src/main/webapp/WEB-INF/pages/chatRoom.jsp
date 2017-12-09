@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page session="true"%>
+
 <html>
 <head>
     <title>Title</title>
@@ -13,10 +14,7 @@
 
 <div class="wraper">
 
-    <div id="messageArea">
-
-    </div>
-
+    <div id="messageArea"></div>
 
     <div class="messageinputer">
         <textarea spellcheck="true" name="inputPanel" id="messageinput" class="messageInput" placeholder="Введите Ваше сообщение..." rows="5" cols="100" autofocus></textarea>

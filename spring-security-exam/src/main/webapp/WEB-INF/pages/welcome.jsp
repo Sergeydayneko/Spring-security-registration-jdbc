@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page session="true"%>
+<%@ page session="true"%>
 <html>
 <head>
     <title>Title</title>

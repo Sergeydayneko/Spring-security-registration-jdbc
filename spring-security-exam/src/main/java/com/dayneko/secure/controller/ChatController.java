@@ -50,10 +50,6 @@ public class ChatController {
     public ResponseEntity<List<Message>> createArticle() {
         List<Message> messages = messageDAO.loadMessages();
 
-        for (Message message : messages) {
-            System.out.println("+++ " + message.getMessageContent());
-        }
-
         return new ResponseEntity<List<Message>>(messages, HttpStatus.OK);
     }
 }

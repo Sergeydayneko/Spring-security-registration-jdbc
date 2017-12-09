@@ -5,13 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -52,7 +50,7 @@ public class MessageDAOImpl implements MessageDAO {
                 message.setOwnerName(resultSet.getString("username"));
                 message.setSendDate(resultSet.getDate("shpt_date"));
                 message.setMessageContent(resultSet.getString("content"));
-                System.out.println("---" + message.toString());
+
                 return message;
             }
         });
