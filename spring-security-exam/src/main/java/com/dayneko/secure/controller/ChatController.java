@@ -1,6 +1,8 @@
 package com.dayneko.secure.controller;
 
+import com.dayneko.secure.dao.MessageDAO;
 import com.dayneko.secure.dao.MessageDAOImpl;
+import com.dayneko.secure.dao.UserDAO;
 import com.dayneko.secure.dao.UserDAOImpl;
 import com.dayneko.secure.entity.Message;
 import com.dayneko.secure.entity.User;
@@ -19,13 +21,15 @@ import java.util.List;
 @Controller
 public class ChatController {
 
-    private User myUser;
+    private final UserDAO userDAO;
+    private final MessageDAO messageDAO;
 
     @Autowired
-    private UserDAOImpl userDAO;
-
-    @Autowired
-    private MessageDAOImpl messageDAO;
+    public ChatController(UserDAO userDAO, MessageDAO messageDAO)
+    {
+        this.userDAO = userDAO;
+        this.messageDAO = messageDAO;
+    }
 
 
     @RequestMapping(value = "/chat")
@@ -33,7 +37,7 @@ public class ChatController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName(); //get logged in username
         model.addAttribute("username", name);
-        myUser = userDAO.getUserInfo(name);
+        User myUser = userDAO.getUserInfo(name);
         model.addAttribute("user_id", myUser.getUser_id());
         model.addAttribute("username", myUser.getUsername());
         model.addAttribute("email", myUser.getEmail());

@@ -1,5 +1,6 @@
 package com.dayneko.secure.controller;
 
+import com.dayneko.secure.dao.UserDAO;
 import com.dayneko.secure.dao.UserDAOImpl;
 import com.dayneko.secure.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class RegisterController {
 
+    private final UserDAO userDAO;
+
     @Autowired
-    private UserDAOImpl userDAOImpl;
+    public RegisterController(UserDAO userDAO) { this.userDAO = userDAO; }
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public ModelAndView showRegister() {
@@ -28,8 +31,7 @@ public class RegisterController {
 
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
     public ModelAndView addUser(@ModelAttribute("User") User user) {
-        userDAOImpl.register(user);
-
+        userDAO.register(user);
         ModelAndView mav = new ModelAndView("welcome");
         return mav;
     }

@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface MessageDAO {
     void saveMessage(Message message);
-
     List<Message> loadMessages();
 }

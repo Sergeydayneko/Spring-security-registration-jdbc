@@ -1,6 +1,8 @@
 package com.dayneko.secure.sockets;
 
+import com.dayneko.secure.dao.MessageDAO;
 import com.dayneko.secure.dao.MessageDAOImpl;
+import com.dayneko.secure.dao.UserDAO;
 import com.dayneko.secure.dao.UserDAOImpl;
 import com.dayneko.secure.entity.Message;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +20,11 @@ import java.io.IOException;
                 )
 public class ServerWebSocket {
 
-    private final MessageDAOImpl messageDAO;
-    private final UserDAOImpl userDAO;
+    private final MessageDAO messageDAO;
+    private final UserDAO userDAO;
 
-//    Сердюковское внедрение зависимостей
     @Autowired
-    public ServerWebSocket (UserDAOImpl userDAO, MessageDAOImpl messageDAO)
+    public ServerWebSocket (UserDAO userDAO, MessageDAO messageDAO)
     {
         this.userDAO = userDAO;
         this.messageDAO = messageDAO;
