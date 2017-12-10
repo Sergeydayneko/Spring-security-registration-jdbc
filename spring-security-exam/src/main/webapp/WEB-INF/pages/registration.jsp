@@ -9,6 +9,8 @@
 </head>
 <body>
 <form:form id="regForm" modelAttribute="User" action="registerProcess" method="post">
+    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+
     <table align="center">
         <tr>
             <td>

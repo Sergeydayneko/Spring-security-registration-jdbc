@@ -31,9 +31,9 @@ public class ChatController {
         this.messageDAO = messageDAO;
     }
 
-
     @RequestMapping(value = "/chat")
-    public String getAttrs(ModelMap model) {
+    public String getAttrs(ModelMap model)
+    {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName(); //get logged in username
         model.addAttribute("username", name);
@@ -47,7 +47,8 @@ public class ChatController {
     }
 
     @GetMapping("chatMessages")
-    public ResponseEntity<List<Message>> createArticle() {
+    public ResponseEntity<List<Message>> createArticle()
+    {
         List<Message> messages = messageDAO.loadMessages();
 
         return new ResponseEntity<List<Message>>(messages, HttpStatus.OK);

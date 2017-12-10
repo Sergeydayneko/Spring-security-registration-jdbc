@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     //    Берем значения того, кто отправил и что он отправил
         let userName    = document.getElementById('username').value
-        let userId      = document.getElementById('userDd').value
+        let userId      = document.getElementById('userId').value
         let messageText = document.getElementById('messageInput').value
 
         if (messageText.length > 0 && messageText.trim() != "") {
