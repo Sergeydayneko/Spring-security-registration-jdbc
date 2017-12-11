@@ -16,6 +16,7 @@ public class RegistrationUtilImpl implements RegistrationUtil
 {
     private final UserDAO userDAO;
 
+
     @Autowired
     public RegistrationUtilImpl(UserDAO userDAO)
     {
@@ -36,8 +37,13 @@ public class RegistrationUtilImpl implements RegistrationUtil
 
         for (Map.Entry<?, ?> param : parameters.entrySet())
         {
+            //TODO неправильно работает порядок заполнения коллекции
             if (param.getKey() instanceof String) {
                 String[] savePass = new String[1];
+                if (param.getKey().toString() == "password")
+                {
+                    savePass[0] = param.getKey().toString();
+                }
 
                 switch (param.getKey().toString()) {
                     case "password":

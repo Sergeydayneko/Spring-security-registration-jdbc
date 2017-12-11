@@ -1,6 +1,7 @@
 package com.dayneko.secure.controller;
 
 import com.dayneko.secure.RegistrationUtil.RegistrationUtil;
+import com.dayneko.secure.comparators.ValidateComparator;
 import com.dayneko.secure.dao.UserDAO;
 import com.dayneko.secure.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +48,7 @@ public class RegisterController
         String email = servletRequest.getParameter("email");
         String phone = servletRequest.getParameter("phone");
 
-        Map<String, String> parameterValue = new TreeMap<>();
+        Map<String, String> parameterValue = new TreeMap<>(new ValidateComparator());
         parameterValue.put("password", password);
         parameterValue.put("passwordConfirm", passwordConfirm);
         parameterValue.put("email", email);
