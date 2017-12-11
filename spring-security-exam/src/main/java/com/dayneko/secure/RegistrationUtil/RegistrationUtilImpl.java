@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 
+import static com.dayneko.secure.RegistrationUtil.RegExpHelpers.EMAIL_REGEXP;
+import static com.dayneko.secure.RegistrationUtil.RegExpHelpers.MOBILE_PHONEREGEXP;
 import static com.dayneko.secure.RegistrationUtil.RegExpHelpers.PASSWORD_REGEXP;
 
 @Component
@@ -35,28 +37,57 @@ public class RegistrationUtilImpl implements RegistrationUtil
         for (Map.Entry<?, ?> param : parameters.entrySet())
         {
             if (param.getKey() instanceof String) {
+                String[] savePass = new String[1];
 
                 switch (param.getKey().toString()) {
                     case "password":
-                        System.out.println("PASSWORD " + param.getValue().toString());
-                        char[] symbols = param.getValue().toString().toCharArray();
-                        if (symbols.length < 3  || symbols.length > 15 ||
+                        savePass[0] = param.getKey().toString();
+
+                        char[] PasswordSymbols = param.getValue().toString().toCharArray();
+                        if (PasswordSymbols.length < 3  || PasswordSymbols.length > 15 ||
                             !PASSWORD_REGEXP.matcher(param.getValue().toString()).matches())
                         {
-                            responses.add(new ServerResponse(6000, "Invalid password!"));
+                            responses.add(new ServerResponse(6000, "Invalid PASSWORD!"));
                         } else
                             responses.add(new ServerResponse(5000, "Password OK"));
+                        break;
                     case "passwordConfirm":
-//                        if ()
-
+                        System.out.println(savePass[0]);
+                        try {
+                            if ((param.getValue().toString()).equals(savePass[0]))
+                            {
+                                responses.add(new ServerResponse(6000, "Passwords don't match"));
+                            } else
+                                responses.add(new ServerResponse(5000, "PASSWORDS are OK"));
+                        } catch (NullPointerException npe) {
+                            npe.printStackTrace();
+                        }
+                        break;
                     case "email":
-                        System.out.println("Email! " + param.getValue().toString());
+                        char[] emailSymbols = param.getValue().toString().toCharArray();
+                        if (emailSymbols.length < 3  || emailSymbols.length > 25 ||
+                                !EMAIL_REGEXP.matcher(param.getValue().toString()).matches())
+                        {
+                            responses.add(new ServerResponse(6000, "Invalid EMAIL!"));
+                        } else
+                            responses.add(new ServerResponse(5000, "EMAIL OK"));
+                        break;
                     case "phone":
-                        System.out.println("Phone number " + param.getValue().toString());
+                        char[] phoneSymbols = param.getValue().toString().toCharArray();
+                        if (phoneSymbols.length < 3  || phoneSymbols.length > 10 ||
+                                !MOBILE_PHONEREGEXP.matcher(param.getValue().toString()).matches())
+                        {
+                            responses.add(new ServerResponse(6000, "Invalid PHONE!"));
+                        } else
+                            responses.add(new ServerResponse(5000, "PHONE OK"));
+                        break;
                 }
             }
 
+
         }
+//        for (ServerResponse response : responses)
+//            System.out.println(response.getContent() + " " + response.getStatus());
 
         return null;
     }
