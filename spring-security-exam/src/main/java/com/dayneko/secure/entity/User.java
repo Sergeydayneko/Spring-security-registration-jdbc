@@ -1,6 +1,7 @@
 package com.dayneko.secure.entity;
 
-public class User {
+public class User
+{
 
     private int userId;
     private String username;

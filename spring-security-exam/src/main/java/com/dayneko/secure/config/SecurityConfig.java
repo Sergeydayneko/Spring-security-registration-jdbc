@@ -19,8 +19,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true)
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
+public class SecurityConfig extends WebSecurityConfigurerAdapter
+{
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
@@ -31,7 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http) throws Exception
+    {
         http.authorizeRequests()
                 .antMatchers("/userPage").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')") //пишем с приставкой ROLE_
                 .antMatchers("/adminPage").access("hasRole('ROLE_ADMIN')")
@@ -53,7 +54,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login?logout")
                 .invalidateHttpSession(true);
-
     }
 
     @Bean

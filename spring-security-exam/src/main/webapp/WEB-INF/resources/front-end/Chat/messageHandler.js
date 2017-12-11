@@ -33,7 +33,8 @@ $(document).ready(function () {
             })
     }
 
-    sendMessage = () => {
+    sendMessage = (e) => {
+        e.preventDefault()
 
     //    Берем значения того, кто отправил и что он отправил
         let userName    = document.getElementById('username').value

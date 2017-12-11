@@ -1,9 +1,7 @@
 package com.dayneko.secure.controller;
 
 import com.dayneko.secure.dao.MessageDAO;
-import com.dayneko.secure.dao.MessageDAOImpl;
 import com.dayneko.secure.dao.UserDAO;
-import com.dayneko.secure.dao.UserDAOImpl;
 import com.dayneko.secure.entity.Message;
 import com.dayneko.secure.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page session="true"%>
+<%@ page session="true"%>
 
 <html>
 <head>
     <title>Title</title>
-    <script  src="../resources/vendor/js/jquery-3.2.1.min.js"></script>
+    <script  src="../resources/vendor/js/jquery-3.2.1.js"></script>
     <script  src="../resources/vendor/js/underscore.js"></script>
-    <script  src="../resources/front-end/socketConnection.js"></script>
-    <script src="../resources/front-end/mands.js"></script>
+    <script  src="../resources/front-end/Chat/socketConnection.js"></script>
+    <script src="../resources/front-end/Chat/messageHandler.js"></script>
 
 </head>
 <body>

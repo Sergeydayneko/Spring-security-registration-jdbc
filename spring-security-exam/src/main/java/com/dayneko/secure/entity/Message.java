@@ -3,7 +3,8 @@ package com.dayneko.secure.entity;
 
 import java.util.Date;
 
-public class Message {
+public class Message
+{
 
     private int messageId;
     private Date sendDate;

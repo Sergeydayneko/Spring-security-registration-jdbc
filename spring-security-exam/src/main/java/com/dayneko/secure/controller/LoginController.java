@@ -12,9 +12,7 @@ import java.security.Principal;
 public class LoginController {
 
     @RequestMapping(value = "/")
-    public String start(){
-        return "index";
-    }
+    public String start() { return "index"; }
 
     @RequestMapping(value = "/index")
     public ModelAndView indexPage(@ModelAttribute("userJSP") User user)
@@ -35,8 +33,7 @@ public class LoginController {
     public String adminsPages() { return "adminPage"; }
 
     @RequestMapping(value = "/403")
-    public ModelAndView accessDenied(Principal user)
-    {
+    public ModelAndView accessDenied(Principal user) {
         ModelAndView model = new ModelAndView();
 
         //Login having test

@@ -96,4 +96,13 @@ public class UserDAOImpl implements UserDAO {
                 });
         return userInfo;
     }
+
+    public boolean checkUserExist(String username)
+    {
+        String sql = "SELECT COUNT(*)\n" +
+                " FROM users\n" +
+                " WHERE username = ?";
+
+        return jdbcTemplate.queryForObject(sql, Boolean.class, username);
+    }
 }

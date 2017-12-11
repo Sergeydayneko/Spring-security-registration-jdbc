@@ -1,6 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
-<%@page session="true"%>
+<%@ page session="true"%>
 
 <html>
 <head>
@@ -10,6 +10,23 @@
 <body>
 <form:form id="regForm" modelAttribute="User" action="registerProcess" method="post">
     <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+
+    <label for="registrationName">?????</label>
+    <input type="text" min="1" max="32" id="registrationName">
+
+    <label for="registrationPassword">??????</label>
+    <input type="password" min="1" max="32" id="registrationPassword">
+
+    <label for="passwordConfirm">????????????? ??????</label>
+    <input type="password" min="1" max="32" id="passwordConfirm">
+
+    <label for="registrationEmail">?????</label>
+    <input type="text" min="1" max="32" id="registrationEmail">
+
+    <label for="registrationPhone">?????????? ???????</label>
+    <input type="number" min="1" max="10" id="registrationPhone">
+
+
 
     <table align="center">
         <tr>
