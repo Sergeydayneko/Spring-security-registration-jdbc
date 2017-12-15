@@ -1,8 +1,8 @@
-package com.dayneko.secure.comparators;
+package com.dayneko.secure.helpers;
 
 import java.util.Comparator;
 
-public class ValidateComparator implements Comparator<String>
+public class validateComparator implements Comparator<String>
 {
 
     //TODO ПЕРЕПИСАТЬ КОМПАРАТОР

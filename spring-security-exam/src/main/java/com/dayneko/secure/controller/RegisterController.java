@@ -1,12 +1,13 @@
 package com.dayneko.secure.controller;
 
 import com.dayneko.secure.RegistrationUtil.RegistrationUtil;
-import com.dayneko.secure.comparators.ValidateComparator;
 import com.dayneko.secure.dao.UserDAO;
+import com.dayneko.secure.entity.ServerResponse;
 import com.dayneko.secure.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -40,24 +41,39 @@ public class RegisterController
     }
 
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
-    public String addUser(HttpServletRequest servletRequest)
+    public ResponseEntity<List<ServerResponse>> addUser(HttpServletRequest servletRequest)
     {
+        ArrayList<ServerResponse> validationResponse = new ArrayList<>();
+        Map<String, String> parameterValue = new TreeMap<>();
+        ArrayList<Boolean> validationPassing = new ArrayList<>();
+
         String username = servletRequest.getParameter("login");
         String password = servletRequest.getParameter("password");
         String passwordConfirm = servletRequest.getParameter("passwordConfirm");
         String email = servletRequest.getParameter("email");
         String phone = servletRequest.getParameter("phone");
 
-        Map<String, String> parameterValue = new TreeMap<>();
         parameterValue.put("password", password);
         parameterValue.put("passwordConfirm", passwordConfirm);
         parameterValue.put("email", email);
         parameterValue.put("phone", phone);
-        parameterValue.put("hello", "world");
 
-        registrationUtil.checkFields(parameterValue);
+        validationResponse = registrationUtil.checkFields(parameterValue);
 
-//        userDAO.register(user);
-        return "redirect:/index";
+        //TODO доделать валидацию и регистрацию
+        for( ServerResponse resp : validationResponse)
+        {
+            validationPassing.add(resp.getValid());
+        }
+
+        if (validationPassing.contains(false))
+        {
+            return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.BAD_REQUEST);
+        }
+
+        User user = new User(username, password, email, Integer.parseInt(phone));
+        userDAO.register(user);
+
+        return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.OK);
     }
 }

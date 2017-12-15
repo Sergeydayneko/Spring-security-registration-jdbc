@@ -2,6 +2,7 @@ package com.dayneko.secure.entity;
 
 public class User
 {
+    //TODO Сделать рефакторинг на создание конструктора, чтобы было вместо setter'ов
 
     private int userId;
     private String username;
@@ -9,6 +10,18 @@ public class User
     private String role;
     private String email;
     private int phone;
+
+    public User(String username, String password, String email, int phone)
+    {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public User(){
+        String mock = "Заглушка, позже удалить";
+    }
 
     public String getUsername() {
         return username;

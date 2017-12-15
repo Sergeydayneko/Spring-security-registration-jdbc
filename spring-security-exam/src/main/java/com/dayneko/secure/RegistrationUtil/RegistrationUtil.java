@@ -8,5 +8,5 @@ import java.util.Map;
 public interface RegistrationUtil
 {
     boolean checkUser(String username);
-    ArrayList<ServerResponse> checkFields(Map<String, String> parameters);
+    ArrayList<ServerResponse> checkFields(Map<?, ?> parameters);
 }

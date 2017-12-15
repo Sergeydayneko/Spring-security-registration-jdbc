@@ -16,7 +16,6 @@ public class RegistrationUtilImpl implements RegistrationUtil
 {
     private final UserDAO userDAO;
 
-
     @Autowired
     public RegistrationUtilImpl(UserDAO userDAO)
     {
@@ -31,15 +30,16 @@ public class RegistrationUtilImpl implements RegistrationUtil
     }
 
     @Override
-    public ArrayList<ServerResponse> checkFields(Map<String, String> parameters)
+    public ArrayList<ServerResponse> checkFields(Map<?, ?> parameters)
     {
-        String[] cachePass = { parameters.get("password") };
+        String [] cachePass = { String.valueOf(parameters.get("password")) };
         ArrayList<ServerResponse> responses = new ArrayList<>();
 
         for (Map.Entry<?, ?> param : parameters.entrySet())
         {
             if (param.getKey() instanceof String)
             {
+//                TODO предпологается сделать универсальный валидатор
                 switch (param.getKey().toString())
                 {
                     case "password":
@@ -47,17 +47,17 @@ public class RegistrationUtilImpl implements RegistrationUtil
                         if (PasswordSymbols.length < 3  || PasswordSymbols.length > 15 ||
                             !PASSWORD_REGEXP.matcher(param.getValue().toString()).matches())
                         {
-                            responses.add(new ServerResponse(6000, "Invalid PASSWORD!"));
+                            responses.add(new ServerResponse(6000, "Invalid PASSWORD!", false));
                         } else
-                            responses.add(new ServerResponse(5000, "Password OK"));
+                            responses.add(new ServerResponse(5000, "Password OK", true));
                         break;
                     case "passwordConfirm":
                         try {
                             if (!(param.getValue().toString()).equals(cachePass[0]))
                             {
-                                responses.add(new ServerResponse(6000, "Passwords don't match"));
+                                responses.add(new ServerResponse(6000, "Passwords don't match", false));
                             } else {
-                                responses.add(new ServerResponse(5000, "PASSWORDS are OK"));
+                                responses.add(new ServerResponse(5000, "PASSWORDS are OK", true));
                             }
                         } catch (NullPointerException npe) {
                             npe.printStackTrace();
@@ -68,25 +68,23 @@ public class RegistrationUtilImpl implements RegistrationUtil
                         if (emailSymbols.length < 3  || emailSymbols.length > 25 ||
                                 !EMAIL_REGEXP.matcher(param.getValue().toString()).matches())
                         {
-                            responses.add(new ServerResponse(6000, "Invalid EMAIL!"));
+                            responses.add(new ServerResponse(6000, "Invalid EMAIL!", false));
                         } else
-                            responses.add(new ServerResponse(5000, "EMAIL OK"));
+                            responses.add(new ServerResponse(5000, "EMAIL OK", true));
                         break;
                     case "phone":
                         char[] phoneSymbols = param.getValue().toString().toCharArray();
                         if (phoneSymbols.length < 3  || phoneSymbols.length > 10 ||
                                 !MOBILE_PHONEREGEXP.matcher(param.getValue().toString()).matches())
                         {
-                            responses.add(new ServerResponse(6000, "Invalid PHONE!"));
+                            responses.add(new ServerResponse(6000, "Invalid PHONE!", false));
                         } else
-                            responses.add(new ServerResponse(5000, "PHONE OK"));
+                            responses.add(new ServerResponse(5000, "PHONE OK", true));
                         break;
                 }
             }
         }
-        for (ServerResponse response : responses)
-            System.out.println(response.getContent() + " " + response.getStatus());
 
-        return null;
+        return responses;
     }
 }
