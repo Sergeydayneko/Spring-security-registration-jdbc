@@ -31,24 +31,18 @@ public class RegistrationUtilImpl implements RegistrationUtil
     }
 
     @Override
-    public ArrayList<ServerResponse> checkFields(Map<?, ?> parameters)
+    public ArrayList<ServerResponse> checkFields(Map<String, String> parameters)
     {
+        String[] cachePass = { parameters.get("password") };
         ArrayList<ServerResponse> responses = new ArrayList<>();
 
         for (Map.Entry<?, ?> param : parameters.entrySet())
         {
-            //TODO неправильно работает порядок заполнения коллекции
-            if (param.getKey() instanceof String) {
-                String[] savePass = new String[1];
-                if (param.getKey().toString() == "password")
+            if (param.getKey() instanceof String)
+            {
+                switch (param.getKey().toString())
                 {
-                    savePass[0] = param.getKey().toString();
-                }
-
-                switch (param.getKey().toString()) {
                     case "password":
-                        savePass[0] = param.getKey().toString();
-
                         char[] PasswordSymbols = param.getValue().toString().toCharArray();
                         if (PasswordSymbols.length < 3  || PasswordSymbols.length > 15 ||
                             !PASSWORD_REGEXP.matcher(param.getValue().toString()).matches())
@@ -58,13 +52,13 @@ public class RegistrationUtilImpl implements RegistrationUtil
                             responses.add(new ServerResponse(5000, "Password OK"));
                         break;
                     case "passwordConfirm":
-                        System.out.println(savePass[0]);
                         try {
-                            if ((param.getValue().toString()).equals(savePass[0]))
+                            if (!(param.getValue().toString()).equals(cachePass[0]))
                             {
                                 responses.add(new ServerResponse(6000, "Passwords don't match"));
-                            } else
+                            } else {
                                 responses.add(new ServerResponse(5000, "PASSWORDS are OK"));
+                            }
                         } catch (NullPointerException npe) {
                             npe.printStackTrace();
                         }
@@ -89,11 +83,9 @@ public class RegistrationUtilImpl implements RegistrationUtil
                         break;
                 }
             }
-
-
         }
-//        for (ServerResponse response : responses)
-//            System.out.println(response.getContent() + " " + response.getStatus());
+        for (ServerResponse response : responses)
+            System.out.println(response.getContent() + " " + response.getStatus());
 
         return null;
     }

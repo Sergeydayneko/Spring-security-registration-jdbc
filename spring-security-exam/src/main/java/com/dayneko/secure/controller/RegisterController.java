@@ -48,15 +48,14 @@ public class RegisterController
         String email = servletRequest.getParameter("email");
         String phone = servletRequest.getParameter("phone");
 
-        Map<String, String> parameterValue = new TreeMap<>(new ValidateComparator());
+        Map<String, String> parameterValue = new TreeMap<>();
         parameterValue.put("password", password);
         parameterValue.put("passwordConfirm", passwordConfirm);
         parameterValue.put("email", email);
         parameterValue.put("phone", phone);
+        parameterValue.put("hello", "world");
 
         registrationUtil.checkFields(parameterValue);
-
-        System.out.println(registrationUtil.checkUser(username));
 
 //        userDAO.register(user);
         return "redirect:/index";
