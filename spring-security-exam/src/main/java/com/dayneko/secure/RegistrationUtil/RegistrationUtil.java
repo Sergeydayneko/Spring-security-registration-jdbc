@@ -7,6 +7,6 @@ import java.util.Map;
 
 public interface RegistrationUtil
 {
-    boolean checkUser(String username);
+    ServerResponse checkUser(String username);
     ArrayList<ServerResponse> checkFields(Map<?, ?> parameters);
 }

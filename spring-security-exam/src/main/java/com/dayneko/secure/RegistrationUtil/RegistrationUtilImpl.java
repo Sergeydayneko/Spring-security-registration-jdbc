@@ -22,18 +22,24 @@ public class RegistrationUtilImpl implements RegistrationUtil
         this.userDAO = userDAO;
     }
 
-
     @Override
-    public boolean checkUser(String username)
+    public ServerResponse checkUser(String username)
     {
-        return userDAO.checkUserExist(username);
+        System.out.println(username + " testusr");
+        System.out.println(userDAO.checkUserExist(username) + " testCheck");
+        if (userDAO.checkUserExist(username))
+        {
+            new ServerResponse(6000, "User is already exists", false);
+        }
+
+        return new ServerResponse(500, "User  OK", true);
     }
 
     @Override
     public ArrayList<ServerResponse> checkFields(Map<?, ?> parameters)
     {
-        String [] cachePass = { String.valueOf(parameters.get("password")) };
         ArrayList<ServerResponse> responses = new ArrayList<>();
+        String [] cachePass = { String.valueOf(parameters.get("password")) };
 
         for (Map.Entry<?, ?> param : parameters.entrySet())
         {

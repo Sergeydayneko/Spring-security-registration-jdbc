@@ -43,7 +43,7 @@ public class RegisterController
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
     public ResponseEntity<List<ServerResponse>> addUser(HttpServletRequest servletRequest)
     {
-        ArrayList<ServerResponse> validationResponse = new ArrayList<>();
+        ArrayList<ServerResponse> validationResponse;
         Map<String, String> parameterValue = new TreeMap<>();
         ArrayList<Boolean> validationPassing = new ArrayList<>();
 
@@ -59,16 +59,17 @@ public class RegisterController
         parameterValue.put("phone", phone);
 
         validationResponse = registrationUtil.checkFields(parameterValue);
+        validationResponse.add(registrationUtil.checkUser(username.toLowerCase()));
 
-        //TODO доделать валидацию и регистрацию
         for( ServerResponse resp : validationResponse)
         {
+            System.out.println(resp.getValid());
             validationPassing.add(resp.getValid());
         }
 
         if (validationPassing.contains(false))
         {
-            return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.UNAUTHORIZED);
         }
 
         User user = new User(username, password, email, Integer.parseInt(phone));

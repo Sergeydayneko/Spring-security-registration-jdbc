@@ -18,6 +18,9 @@ $(document).ready(function () {
         }
 
         $.post(`registerProcess`, userJSON, function (data) {
+            debugger
+            //TODO Сделать через промисы, обработать ошибку, вывод информации
+            //TODO Сделать валидацию на фронт части
             console.log(data)
         })
 
