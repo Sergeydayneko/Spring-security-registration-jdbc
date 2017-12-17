@@ -1,79 +1,64 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@ page session="true"%>
 
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+                <!--X-CSRF-TOKEN -->
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+
     <title>Registration</title>
+    <script  src="../resources/vendor/js/jquery-3.2.1.js"></script>
+    <script  src="../resources/vendor/js/underscore.js"></script>
+    <script src="../resources/front-end/helpers/ajaxCsrf.js"></script>
+    <script src="../resources/front-end/User/registrationHandler.js"></script>
+    <script src="../resources/front-end/helpers/inputProhibition.js"></script>
+    <script src="../resources/front-end/helpers/patternValidation.js"></script>
 </head>
 <body>
-<form:form id="regForm" modelAttribute="User" action="registerProcess" method="post">
-    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+<form id="regForm">
 
-    <label for="registrationName">?????</label>
-    <input type="text" min="1" max="32" id="registrationName">
+    <label for="registrationName">Login</label>
+    <input
+            type    = "text"
+            min     = "1"
+            max     = "32"
+            id      = "registrationName"
+    >
 
-    <label for="registrationPassword">??????</label>
-    <input type="password" min="1" max="32" id="registrationPassword">
+    <label for="registrationPassword">Password</label>
+    <input
+            type    = "password"
+            min     = "1"
+            max     = "32"
+            id      = "registrationPassword"
+    >
 
-    <label for="passwordConfirm">????????????? ??????</label>
-    <input type="password" min="1" max="32" id="passwordConfirm">
+    <label for="passwordConfirm">Password Confirm</label>
+    <input
+            type    = "password"
+            min     = "1"
+            max     = "32"
+            id      = "passwordConfirm"
+    >
 
-    <label for="registrationEmail">?????</label>
-    <input type="text" min="1" max="32" id="registrationEmail">
+    <label for="registrationEmail">Email address</label>
+    <input
+            type    = "text"
+            min     = "1"
+            max     = "32"
+            id      = "registrationEmail"
+    >
 
-    <label for="registrationPhone">?????????? ???????</label>
-    <input type="number" min="1" max="10" id="registrationPhone">
+    <label for="registrationPhone">Contact number</label>
+    <input
+            type    = "text"
+            id      = "registrationPhone"
+            min     = "3"
+            max     = "12"
+    >
 
-
-
-    <table align="center">
-        <tr>
-            <td>
-                <form:label path="username">Username</form:label>
-            </td>
-            <td>
-                <form:input path="username" name="username" id="username" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <form:label path="password">Password</form:label>
-            </td>
-            <td>
-                <form:password path="password" name="password" id="password" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <form:label path="email">Email</form:label>
-            </td>
-            <td>
-                <form:input path="email" name="email" id="email" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <form:label path="phone">Phone</form:label>
-            </td>
-            <td>
-                <form:input path="phone" name="phone" id="phone" />
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <form:button id="register" name="register">Register</form:button>
-            </td>
-        </tr>
-        <tr></tr>
-        <tr>
-            <td></td>
-            <td><a href="/">Home</a>
-            </td>
-        </tr>
-    </table>
-</form:form>
+    <button id="regSubmit" type="submit">Register</button>
+</form>
 </body>
 </html>

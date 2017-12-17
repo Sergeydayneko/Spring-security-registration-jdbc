@@ -28,7 +28,7 @@ $(document).ready(function () {
                     $('#messageArea').append(messagesArea)
                 })
              })
-            .catch( function (reject) {
+            .catch(function (reject) {
                 console.log(reject)
             })
     }

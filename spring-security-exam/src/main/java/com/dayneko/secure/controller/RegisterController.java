@@ -35,7 +35,7 @@ public class RegisterController
     @RequestMapping(value = "/registration")
     public ModelAndView showRegister()
     {
-        ModelAndView mav = new ModelAndView("registrationTEST");
+        ModelAndView mav = new ModelAndView("registration");
         mav.addObject("User", new User());
         return mav;
     }

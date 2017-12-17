@@ -18,11 +18,10 @@ $(document).ready(function () {
         }
 
         $.post(`registerProcess`, userJSON, function (data) {
-            debugger
-            //TODO Сделать через промисы, обработать ошибку, вывод информации
-            //TODO Сделать валидацию на фронт части
-            console.log(data)
+            console.log("User has been registered")
+        }).fail(function (error) {
+            //TODO Сделать обработчик поступивших ошибок
+            console.log(error.responseJSON)
         })
-
     })
 })
