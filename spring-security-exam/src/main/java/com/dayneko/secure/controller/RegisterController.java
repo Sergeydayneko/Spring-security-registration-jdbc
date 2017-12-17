@@ -63,7 +63,6 @@ public class RegisterController
 
         for( ServerResponse resp : validationResponse)
         {
-            System.out.println(resp.getValid());
             validationPassing.add(resp.getValid());
         }
 
@@ -72,7 +71,7 @@ public class RegisterController
             return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.UNAUTHORIZED);
         }
 
-        User user = new User(username, password, email, Integer.parseInt(phone));
+        User user = new User(username, password, email, phone);
         userDAO.register(user);
 
         return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.OK);

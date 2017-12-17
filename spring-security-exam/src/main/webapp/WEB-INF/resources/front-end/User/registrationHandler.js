@@ -18,7 +18,7 @@ $(document).ready(function () {
         }
 
         $.post(`registerProcess`, userJSON, function (data) {
-            console.log("User has been registered")
+            document.location.href = 'http://localhost:8080/login'
         }).fail(function (error) {
             //TODO Сделать обработчик поступивших ошибок
             console.log(error.responseJSON)

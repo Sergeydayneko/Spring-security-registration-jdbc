@@ -25,21 +25,19 @@ public class RegistrationUtilImpl implements RegistrationUtil
     @Override
     public ServerResponse checkUser(String username)
     {
-        System.out.println(username + " testusr");
-        System.out.println(userDAO.checkUserExist(username) + " testCheck");
         if (userDAO.checkUserExist(username))
         {
             new ServerResponse(6000, "User is already exists", false);
         }
 
-        return new ServerResponse(500, "User  OK", true);
+        return new ServerResponse(5000, "User  OK", true);
     }
 
     @Override
     public ArrayList<ServerResponse> checkFields(Map<?, ?> parameters)
     {
         ArrayList<ServerResponse> responses = new ArrayList<>();
-        String [] cachePass = { String.valueOf(parameters.get("password")) };
+        String[] cachePass = { String.valueOf(parameters.get("password")) };
 
         for (Map.Entry<?, ?> param : parameters.entrySet())
         {
@@ -79,8 +77,9 @@ public class RegistrationUtilImpl implements RegistrationUtil
                             responses.add(new ServerResponse(5000, "EMAIL OK", true));
                         break;
                     case "phone":
+                        System.out.println(param.getValue() instanceof String);
                         char[] phoneSymbols = param.getValue().toString().toCharArray();
-                        if (phoneSymbols.length < 3  || phoneSymbols.length > 10 ||
+                        if (phoneSymbols.length < 3  || phoneSymbols.length > 15 ||
                                 !MOBILE_PHONEREGEXP.matcher(param.getValue().toString()).matches())
                         {
                             responses.add(new ServerResponse(6000, "Invalid PHONE!", false));

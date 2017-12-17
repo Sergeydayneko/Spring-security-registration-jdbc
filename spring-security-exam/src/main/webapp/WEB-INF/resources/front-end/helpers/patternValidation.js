@@ -14,29 +14,45 @@ $(document).ready(function () {
 
     checkEmail.blur(function () {
        if (!(EMAIL_REGEXP.test(this.value))) {
-           this.classList.remove("validation-false")
+           this.classList.add("has-error")
+           this.classList.remove("has-success")
            this.append('<p> Wrong email </p>')
+       } else {
+           this.classList.add('has-success')
+           this.classList.remove("has-error")
        }
     })
 
     checkPass.blur(function () {
         if (!(PASSWORD_REGEXP.test(this.value))) {
-            this.classList.remove("validation-false")
+            this.classList.add("has-error")
+            this.classList.remove("has-success")
             this.append('<p> Wrong password </p>')
+        } else {
+            this.classList.add('has-success')
+            this.classList.remove("has-error")
         }
     })
 
     checkPhone.blur(function () {
         if (!(MOBILE_PHONE_REGEXP.test(this.value))) {
-            this.classList.remove("validation-false")
+            this.classList.add("has-error")
+            this.classList.remove("has-success")
             this.append('<p> Wrong phone </p>')
+        } else {
+            this.classList.add('has-success')
+            this.classList.remove("has-error")
         }
     })
 
     checkPassConf.blur(function () {
         if(this.value !== checkPass.val()){
-            this.classList.remove("validation-false")
+            this.classList.add("has-error")
+            this.classList.remove("has-success")
             this.append('<p> Passwords don\'t match </p>')
+        } else {
+            this.classList.add('has-success')
+            this.classList.remove("has-error")
         }
     })
 
