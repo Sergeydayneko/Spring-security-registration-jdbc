@@ -33,6 +33,7 @@
                     id      = "registrationName"
                     class   = "form-control"
                     required
+                    onblur=""
             >
         </div>
 
@@ -85,7 +86,7 @@
             >
         </div>
 
-        <button id="regSubmit" class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        <button id="regSubmit" disabled="disabled" class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
     </form>
 </div>
 </body>

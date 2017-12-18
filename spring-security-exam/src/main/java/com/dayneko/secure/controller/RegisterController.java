@@ -43,15 +43,17 @@ public class RegisterController
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
     public ResponseEntity<List<ServerResponse>> addUser(HttpServletRequest servletRequest)
     {
+
+
         ArrayList<ServerResponse> validationResponse;
-        Map<String, String> parameterValue = new TreeMap<>();
+        Map<String, String> parameterValue   = new TreeMap<>();
         ArrayList<Boolean> validationPassing = new ArrayList<>();
 
-        String username = servletRequest.getParameter("login");
-        String password = servletRequest.getParameter("password");
+        String username        = servletRequest.getParameter("login");
+        String password        = servletRequest.getParameter("password");
         String passwordConfirm = servletRequest.getParameter("passwordConfirm");
-        String email = servletRequest.getParameter("email");
-        String phone = servletRequest.getParameter("phone");
+        String email           = servletRequest.getParameter("email");
+        String phone           = servletRequest.getParameter("phone");
 
         parameterValue.put("password", password);
         parameterValue.put("passwordConfirm", passwordConfirm);
