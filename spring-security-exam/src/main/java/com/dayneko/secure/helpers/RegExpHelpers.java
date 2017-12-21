@@ -1,8 +1,8 @@
-package com.dayneko.secure.RegistrationUtil;
+package com.dayneko.secure.helpers;
 
 import java.util.regex.Pattern;
 
-class RegExpHelpers
+public class RegExpHelpers
 {
     public static final Pattern EMAIL_REGEXP =
             Pattern.compile("^[-\\w.]+@([A-z0-9][-A-z0-9]+\\.)+[A-z]{2,4}$", Pattern.CASE_INSENSITIVE);

@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 
-import static com.dayneko.secure.RegistrationUtil.RegExpHelpers.EMAIL_REGEXP;
-import static com.dayneko.secure.RegistrationUtil.RegExpHelpers.MOBILE_PHONEREGEXP;
-import static com.dayneko.secure.RegistrationUtil.RegExpHelpers.PASSWORD_REGEXP;
+import static com.dayneko.secure.helpers.RegExpHelpers.EMAIL_REGEXP;
+import static com.dayneko.secure.helpers.RegExpHelpers.MOBILE_PHONEREGEXP;
+import static com.dayneko.secure.helpers.RegExpHelpers.PASSWORD_REGEXP;
 
 @Component
 public class RegistrationUtilImpl implements RegistrationUtil
