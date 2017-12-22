@@ -1,11 +1,14 @@
 package com.dayneko.secure.config;
 
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -52,25 +55,37 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         return driverManagerDataSource;
     }
 
-    //Определение текущей локали
+    //Сохранение в куках значения локали
     @Bean
     public LocaleResolver localeResolver() {
-        SessionLocaleResolver slr = new SessionLocaleResolver();
-        slr.setDefaultLocale(Locale.forLanguageTag("en"));
-        return slr;
+        CookieLocaleResolver resolver = new CookieLocaleResolver();
+        resolver.setDefaultLocale(new Locale("en"));
+        resolver.setCookieName("myLocaleCookie");
+        resolver.setCookieMaxAge(4800);
+        return resolver;
     }
 
-    //Переключение языка на основании текущей локали
+    //через ParamName задается аргумент в хвосте url
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
-        lci.setParamName("lang");
+        lci.setParamName("language");
         return lci;
     }
 
+    //Регистрация интерсепторов. Перехват get аргумента //// ?language=
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
+    }
+
+    //Задаем исходный файл локализации и кодировку
+    @Bean
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+        messageSource.setBasename("/i18n/usermsg");
+        messageSource.setDefaultEncoding("UTF-8");
+        return messageSource;
     }
 
 }
