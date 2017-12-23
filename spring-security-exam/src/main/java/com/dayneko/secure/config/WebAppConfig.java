@@ -84,7 +84,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("/i18n/usermsg");
-        messageSource.setDefaultEncoding("UTF-8");
+        messageSource.setDefaultEncoding("cp1251");
         return messageSource;
     }
 
