@@ -1,6 +1,5 @@
 package com.dayneko.secure.serviceImpl;
 
-
 import com.dayneko.secure.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

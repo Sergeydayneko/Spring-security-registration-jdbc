@@ -7,8 +7,8 @@ import com.dayneko.secure.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,12 +25,14 @@ public class RegisterController
 {
     private final UserDAO userDAO;
     private final RegistrationUtil registrationUtil;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
-    public RegisterController(UserDAO userDAO, RegistrationUtil registrationUtil)
+    public RegisterController(UserDAO userDAO, RegistrationUtil registrationUtil, BCryptPasswordEncoder bCryptPasswordEncoder)
     {
         this.userDAO = userDAO;
         this.registrationUtil = registrationUtil;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     @RequestMapping(value = "/registration")
@@ -75,14 +77,9 @@ public class RegisterController
         }
 
         User user = new User(username, password, email, phone);
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userDAO.register(user);
 
         return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.OK);
-    }
-
-    @GetMapping("/international")
-    public String interPage()
-    {
-        return "international";
     }
 }
