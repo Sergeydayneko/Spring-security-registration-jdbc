@@ -7,6 +7,7 @@ public class User
     private int userId;
     private String username;
     private String password;
+    private String passwordConfirm;
     private String role;
     private String email;
     private String phone;
@@ -64,6 +65,9 @@ public class User
     public void setUserId(int userId) {
         this.userId = userId;
     }
+
+    public String getPasswordConfirm() { return passwordConfirm; }
+    public void setPasswordConfirm(String passwordConfirm) { this.passwordConfirm = passwordConfirm; }
 
     @Override
     public String toString() {

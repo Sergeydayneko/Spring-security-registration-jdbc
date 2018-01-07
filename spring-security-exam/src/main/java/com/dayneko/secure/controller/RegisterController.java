@@ -4,6 +4,7 @@ import com.dayneko.secure.RegistrationUtil.RegistrationUtil;
 import com.dayneko.secure.dao.UserDAO;
 import com.dayneko.secure.entity.ServerResponse;
 import com.dayneko.secure.entity.User;
+import com.dayneko.secure.serviceImpl.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,16 +24,23 @@ import java.util.*;
 @Controller
 public class RegisterController
 {
+    private final SecurityService securityService;
     private final UserDAO userDAO;
     private final RegistrationUtil registrationUtil;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+//    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
-    public RegisterController(UserDAO userDAO, RegistrationUtil registrationUtil, BCryptPasswordEncoder bCryptPasswordEncoder)
+    public RegisterController(
+                              UserDAO userDAO,
+                              RegistrationUtil registrationUtil,
+//                              BCryptPasswordEncoder bCryptPasswordEncoder
+                              SecurityService securityService
+                             )
     {
         this.userDAO = userDAO;
         this.registrationUtil = registrationUtil;
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+//        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.securityService = securityService;
     }
 
     @RequestMapping(value = "/registration")
@@ -77,8 +85,10 @@ public class RegisterController
         }
 
         User user = new User(username, password, email, phone);
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+//        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userDAO.register(user);
+
+        securityService.autologin(username, passwordConfirm);
 
         return new ResponseEntity<List<ServerResponse>>(validationResponse, HttpStatus.OK);
     }

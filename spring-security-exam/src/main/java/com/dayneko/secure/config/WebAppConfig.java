@@ -6,8 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.web.multipart.MultipartResolver;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
@@ -79,6 +77,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         messageSource.setDefaultEncoding("cp1251");
         return messageSource;
     }
+
 
 //    @Bean
 //    public MultipartResolver multipartResolver() {

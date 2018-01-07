@@ -28,7 +28,7 @@
 
         <sec:authorize access="isAuthenticated()">
             <p>Ваш логин: <sec:authentication property="principal.username" /></p>
-            <p><a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Log out</a></p>
+            <p><a class="btn btn-lg btn-danger" href="<c:url value="/login?logout" />" role="button">Log out</a></p>
             <p><a class="btn btn-lg btn-info" href="<c:url value="/userPage" />" role="button">permission USER</a></p>
             <p><a class="btn btn-lg btn-info" href="<c:url value="/adminPage" />" role="button">permission ADMIN</a></p>
             <p><a class="btn btn-lg btn-info" href="<c:url value="/chat" />" role="button">ENTER THE GLOBAL CHAT</a></p>

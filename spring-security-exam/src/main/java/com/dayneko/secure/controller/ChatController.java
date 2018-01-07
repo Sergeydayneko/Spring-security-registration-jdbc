@@ -29,6 +29,7 @@ public class ChatController {
         this.messageDAO = messageDAO;
     }
 
+//    TODO needed for showing online users
     @RequestMapping(value = "/chat")
     public String getAttrs(ModelMap model)
     {

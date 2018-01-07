@@ -43,17 +43,15 @@ public class MessageDAOImpl implements MessageDAO {
                 "JOIN users ON\n" +
                 "messages.sender_id = users.id";
 
-        List<Message> messages = jdbcTemplate.query(sql, new Object[]{}, new RowMapper<Message>() {
+        return jdbcTemplate.query(sql, new Object[]{}, new RowMapper<Message>() {
             @Override
             public Message mapRow(ResultSet resultSet, int rowNum) throws SQLException {
                 Message message = new Message();
                 message.setOwnerName(resultSet.getString("username"));
                 message.setSendDate(resultSet.getDate("shpt_date"));
                 message.setMessageContent(resultSet.getString("content"));
-
                 return message;
             }
         });
-        return messages;
     }
 }
