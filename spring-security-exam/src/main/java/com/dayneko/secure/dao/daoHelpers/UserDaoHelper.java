@@ -57,7 +57,7 @@ public class UserDaoHelper
      *
      */
 
-    static public RowMapper<User> userMapper = (rs, rowNum ) ->
+    static public RowMapper<User> userMapper = (rs, rowNum) ->
     {
         User user = new User();
         user.setUsername(rs.getString("username"));

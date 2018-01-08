@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bebb382-f859-4d0b-ac50-5262732da63e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java" />
     </list>
     <ignored path="$PROJECT_DIR$/spring-security-exam/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,10 +32,11 @@
       <file leaf-file-name="MessageDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+            <state relative-caret-position="-52">
+              <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
               <folding>
-                <marker date="1515443216889" expanded="true" signature="1480:1639" ph="SELECT usern... messages" />
+                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="e#1099#1100#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,18 +45,8 @@
       <file leaf-file-name="messageDaoHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDaoHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="-51">
+              <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,10 +162,10 @@
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/rowMapperImplements/UserInfoMapper.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/ChatController.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/entity/User.java" />
+        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" />
-        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java" />
-        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -1331,7 +1321,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178712000" />
+    <option name="totallyTimeSpent" value="179673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -1360,7 +1350,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Fluid" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40589198" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40589198" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655068" sideWeight="0.47058824" order="0" side_tool="false" content_ui="combo" />
@@ -1849,16 +1839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-          <folding>
-            <marker date="1515443216889" expanded="true" signature="1480:1639" ph="SELECT usern... messages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1871,19 +1851,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="204">
+          <caret line="59" column="58" lean-forward="false" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding>
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="-51">
+          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
