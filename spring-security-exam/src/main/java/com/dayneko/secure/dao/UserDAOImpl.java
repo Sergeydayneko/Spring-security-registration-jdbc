@@ -24,22 +24,22 @@ public class UserDAOImpl implements UserDAO
 
     public void register(User user)
     {
-        namedParameterJdbcTemplate.update(registerUserSql, getRegisterParams(user));
+        namedParameterJdbcTemplate.update(registerUserQuery, getRegisterParams(user));
         namedParameterJdbcTemplate.update(sqlRoleQuery, getRegisterParams(user));
     }
 
     public User getLoginInfo(String username)
     {
-        return jdbcTemplate.queryForObject(userInfoSql, userMapper, username);
+        return jdbcTemplate.queryForObject(userInfoQuery, userMapper, username);
     }
 
     public User getUserInfo(String usernameOrEmail)
     {
-        return jdbcTemplate.queryForObject(chatUserSql, chatUserMapper, usernameOrEmail);
+        return jdbcTemplate.queryForObject(chatUserQuery, chatUserMapper, usernameOrEmail);
     }
 
     public boolean checkUserExist(String username)
     {
-        return jdbcTemplate.queryForObject(checkUserExistSql, Boolean.class, username);
+        return jdbcTemplate.queryForObject(checkUserExistQuery, Boolean.class, username);
     }
 }

@@ -2,34 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bebb382-f859-4d0b-ac50-5262732da63e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/serviceImpl/SecurityService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/rowMapperImplements/UserInfoMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/serviceImpl/SecurityServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_http_client_1_3_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/entity/User.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/webapp/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/config/SecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/config/WebAppConfig.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/config/WebAppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/RegisterController.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/pom.xml" afterPath="$PROJECT_DIR$/spring-security-exam/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/spring_security_exam_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_security_exam_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_9_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/spring-security-exam.iml" afterPath="$PROJECT_DIR$/spring-security-exam/spring-security-exam.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/ChatController.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/ChatController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" afterPath="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/spring-security-exam/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,15 +30,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java">
+      <file leaf-file-name="MessageDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="159">
+              <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
               <folding>
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
+                <marker date="1515443216889" expanded="true" signature="1480:1639" ph="SELECT usern... messages" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messageDaoHelper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,8 +55,8 @@
       <file leaf-file-name="UserDaoHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-569">
-              <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+            <state relative-caret-position="-357">
+              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/entity/ServerResponse.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/RegistrationUtil/RegistrationUtil.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/webapp/WEB-INF/resources/front-end/Chat/messageHandler.js" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/webapp/WEB-INF/pages/registrationTEST.jsp" />
@@ -183,14 +167,15 @@
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/rowMapperImplements/userInfo.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/rowMapperImplements/userInfoMapper.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/rowMapperImplements/UserInfoMapper.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/ChatController.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/entity/User.java" />
-        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java" />
+        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java" />
         <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java" />
+        <option value="$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -1346,7 +1331,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177593000" />
+    <option name="totallyTimeSpent" value="178712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -1375,7 +1360,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Fluid" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40589198" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40589198" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655068" sideWeight="0.47058824" order="0" side_tool="false" content_ui="combo" />
@@ -1441,7 +1426,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40261865" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40261865" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1452,15 +1437,15 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29787233" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39770868" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27458397" sideWeight="0.47922438" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655068" sideWeight="0.47058824" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26096824" sideWeight="0.50855744" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28441754" sideWeight="0.5207756" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2655068" sideWeight="0.5294118" order="8" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1480,17 +1465,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding>
-            <marker date="1515349749442" expanded="true" signature="742:831" ph="INSERT INTO messages... " />
-            <marker date="1515349749442" expanded="true" signature="1271:1430" ph="SELECT usern... messages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/controller/ChatController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -1538,8 +1512,7 @@
         <state relative-caret-position="305">
           <caret line="39" column="78" lean-forward="false" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
           <folding>
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1549,8 +1522,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1590,8 +1562,7 @@
         <state relative-caret-position="85">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1688,6 +1659,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1808,14 +1780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/rowMapperImplements/UserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.3.9.RELEASE/spring-jdbc-4.3.9.RELEASE.jar!/org/springframework/jdbc/core/RowMapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1827,17 +1791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding>
-            <marker date="1515349749442" expanded="true" signature="742:831" ph="INSERT INTO messages... " />
-            <marker date="1515349749442" expanded="true" signature="1271:1430" ph="SELECT usern... messages" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1888,24 +1841,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java">
+    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/rowMapperImplements/UserInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-569">
-          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        <state relative-caret-position="170">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/MessageDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1515443216889" expanded="true" signature="1480:1639" ph="SELECT usern... messages" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        <state relative-caret-position="254">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
           <folding>
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/UserDaoHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-exam/src/main/java/com/dayneko/secure/dao/daoHelpers/messageDaoHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

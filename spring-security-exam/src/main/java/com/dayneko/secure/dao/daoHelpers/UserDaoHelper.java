@@ -16,7 +16,7 @@ public class UserDaoHelper
      *
      */
 
-    static public String userInfoSql = "SELECT USERS.name username, USERS.password password, ROLES.name rolename\n" +
+    static public String userInfoQuery = "SELECT USERS.name username, USERS.password password, ROLES.name rolename\n" +
             "FROM\n" +
             "\t(\n" +
             "\t\tSELECT u.username name, u.password, r.role_id\n" +
@@ -32,15 +32,15 @@ public class UserDaoHelper
             "ON ROLES.role_id = USERS.role_id\n" +
             "WHERE USERS.name = ? ";
 
-    static public final String checkUserExistSql = "SELECT COUNT(*)\n" +
+    static public final String checkUserExistQuery = "SELECT COUNT(*)\n" +
             " FROM users\n" +
             " WHERE username = ?";
 
-    static public final String chatUserSql = "SELECT id, username, password, email, phone\n" +
+    static public final String chatUserQuery = "SELECT id, username, password, email, phone\n" +
             "FROM users\n" +
             "WHERE username = ?";
 
-    static public final String registerUserSql = "insert into users(username, password, email, phone) values(:username, :password, :email, :phone)";
+    static public final String registerUserQuery = "insert into users(username, password, email, phone) values(:username, :password, :email, :phone)";
 
 
     static public String sqlRoleQuery = "INSERT INTO user_roles values(\n" +
