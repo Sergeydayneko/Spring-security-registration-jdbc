@@ -1,6 +1,8 @@
 package com.dayneko.secure.entity;
 
-public class User
+import java.io.Serializable;
+
+public class User implements Serializable
 {
     //TODO Сделать рефакторинг на создание конструктора, чтобы было вместо setter'ов
 

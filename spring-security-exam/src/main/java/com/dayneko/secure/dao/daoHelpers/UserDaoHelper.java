@@ -40,7 +40,15 @@ public class UserDaoHelper
             "FROM users\n" +
             "WHERE username = ?";
 
-//    static public final String registerUserSql = "insert into users(username, password, email, phone) values(:username, :password, :email, :phone)";
+    static public final String registerUserSql = "insert into users(username, password, email, phone) values(:username, :password, :email, :phone)";
+
+
+    static public String sqlRoleQuery = "INSERT INTO user_roles values(\n" +
+            "(SELECT users.id \n" +
+            "FROM users\n" +
+            "WHERE username = :username)\n" +
+            "\n" +
+            ", 1)";
 
     /**
      * LAMBDA ROWMAPPERS
@@ -66,4 +74,22 @@ public class UserDaoHelper
         user.setEmail(rs.getString("email"));
         return user;
     };
+
+
+    /**
+     *
+     * @param user
+     * @return namedParams for JDBC
+     */
+
+    static public Map<String, Object> getRegisterParams(User user)
+    {
+        Map<String, Object> namedParameters = new HashMap<>();
+        namedParameters.put("username", user.getUsername());
+        namedParameters.put("password", user.getPassword());
+        namedParameters.put("email", user.getEmail());
+        namedParameters.put("phone", user.getPhone());
+
+        return namedParameters;
+    }
 }
