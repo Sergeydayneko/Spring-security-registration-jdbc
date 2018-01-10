@@ -17,7 +17,7 @@
     <div id="messageArea"></div>
 
     <div class="messageinputer">
-        <textarea spellcheck="true" name="inputPanel" id="messageinput" class="messageInput" placeholder="Введите Ваше сообщение..." rows="5" cols="100" autofocus></textarea>
+        <textarea spellcheck="true" name="inputPanel" id="messageInput" class="messageInput" placeholder="Введите Ваше сообщение..." rows="5" cols="100" autofocus></textarea>
         <input class="submitButton" onclick="sendMessage();"  type="submit" value="Отправить">
     </div>
 

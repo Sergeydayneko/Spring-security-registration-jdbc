@@ -30,7 +30,8 @@ public class UserDaoHelper
             "\t\tINNER JOIN roles ON r.role_id = roles.id\n" +
             "\t) AS ROLES\n" +
             "ON ROLES.role_id = USERS.role_id\n" +
-            "WHERE USERS.name = ? ";
+            "WHERE USERS.name = ?\n" +
+            "GROUP BY USERS.name";
 
     static public final String checkUserExistQuery = "SELECT COUNT(*)\n" +
             " FROM users\n" +

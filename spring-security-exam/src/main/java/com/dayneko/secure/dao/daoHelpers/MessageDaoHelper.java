@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class messageDaoHelper {
+public class MessageDaoHelper {
 
     /**
      * SQL QUERIES

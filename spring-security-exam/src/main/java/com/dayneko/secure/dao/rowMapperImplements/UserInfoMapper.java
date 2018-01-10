@@ -7,7 +7,7 @@
 //import java.sql.SQLException;
 
 /**
- * EXAMPLE OF USING RowMapper REDEFINITION
+ * EXAMPLE OF USING RowMapper REDEFINITION instead of current lambda expressions
  */
 
 //public class UserInfoMapper implements RowMapper<User>

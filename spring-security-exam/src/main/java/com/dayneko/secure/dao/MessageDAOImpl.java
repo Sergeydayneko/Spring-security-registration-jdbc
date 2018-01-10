@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import javax.sql.DataSource;
 import java.util.List;
 
-import static com.dayneko.secure.dao.daoHelpers.messageDaoHelper.*;
+import static com.dayneko.secure.dao.daoHelpers.MessageDaoHelper.*;
 
 @Repository
 public class MessageDAOImpl implements MessageDAO {
